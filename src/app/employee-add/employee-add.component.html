@@ -1,0 +1,20 @@
+
+<form #addEmpolyeeForm="ngForm">
+    <div class="form-group">
+      <label for="exampleInputID">Id</label>
+      <input type="text" class="form-control" id="exampleInputID" name="Id" [(ngModel)]="Id" placeholder="Enter ID">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName">Name</label>
+        <input type="text" class="form-control" id="exampleInputName" name="Name" [(ngModel)]="Name" placeholder="Enter Name">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail" name="Email" [(ngModel)]="Email" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputNumber">Phone Number</label>
+        <input type="text" class="form-control" id="exampleInputNumber" name="PhoneNum" [(ngModel)]="PhoneNum" placeholder="Enter Number">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
+</form>

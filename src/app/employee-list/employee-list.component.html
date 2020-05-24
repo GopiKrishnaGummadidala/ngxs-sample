@@ -1,0 +1,24 @@
+<h3>All Employees</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let employee of employees$ | async">
+                    <td>{{ employee.id }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.phoneNum }}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="editEmployee(employee)">Edit</button>
+                        <button class="btn btn-primary" (click)="deleteEmployee(employee)">Delete</button>
+                    </td>
+                </tr>
+    </tbody>
+</table>
